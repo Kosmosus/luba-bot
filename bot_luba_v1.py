@@ -130,7 +130,7 @@ def uhod_za_telom(call):
     markup = types.InlineKeyboardMarkup(row_width=1)
     item4 = types.InlineKeyboardButton("Кремы для тела", callback_data='Kremi_dlya_tela')
     item5 = types.InlineKeyboardButton("Кремы для рук", callback_data='Kremi_dlya_ruk')
-    item6 = types.InlineKeyboardButton("Соли и молоко для ванны", callback_data='Soli_i_moloko_dlya_vanni')
+    item6 = types.InlineKeyboardButton("Средства для ванн", callback_data='Sredstva_dlya_vann')
 
     markup.add(item4, item5, item6)
 
@@ -143,9 +143,11 @@ def uhod_za_kozhey_lica(call):
     markup = types.InlineKeyboardMarkup(row_width=2)
     item7 = types.InlineKeyboardButton("Очищение", callback_data='Ochischenie')
     item8 = types.InlineKeyboardButton("Основной уход", callback_data='Osnovnoi_uhod')
-    item9 = types.InlineKeyboardButton("Уход за кожей вокруг глаз", callback_data='Uhod_za_kozhey_vokrug_glaz')
-    item10 = types.InlineKeyboardButton("Маски и пилинги", callback_data='Maski_i_pilingi')
-    markup.add(item7, item8, item9, item10)
+    item9 = types.InlineKeyboardButton("Маски и пилинги", callback_data='Maski_i_pilingi')
+    item10 = types.InlineKeyboardButton("Уход за кожей вокруг глаз", callback_data='Uhod_za_kozhey_vokrug_glaz')
+    item11 = types.InlineKeyboardButton("Декоративная косметика", callback_data='Dekorativnaya_kosmetika')
+
+    markup.add(item7, item8, item9, item10, item11)
 
     bot.send_message(call.message.chat.id, '*Выберите вид(шо писать?) ухода ↓*', reply_markup=markup,
                      parse_mode="Markdown")
