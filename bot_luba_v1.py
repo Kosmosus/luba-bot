@@ -415,6 +415,59 @@ def tkanevie_maski_elizavecca(call):
     pass
 
 
+def uhod_za_kozhey_vokrug_glaz(call):
+    bot.send_message(call.message.chat.id, '_Вы выбрали пункт "Уход за кожей вокруг глаз"._', parse_mode="Markdown")
+    markup = types.InlineKeyboardMarkup(row_width=1)
+    item42 = types.InlineKeyboardButton("Патчи Esthetic House", callback_data='Patchi_esthetic_house')
+    item43 = types.InlineKeyboardButton("Одноразовые тканевые патчи J:on",
+                                        callback_data='Odnorazovie_tkanevie_patchi')
+    item44 = types.InlineKeyboardButton("Крем для век «Ластик от морщин» Organic Kitchen",
+                                        callback_data='Krem_dlya_vek_organic_kitchen')
+    item45 = types.InlineKeyboardButton("Крем для кожи вокруг глаз с алоэ Levrana",
+                                        callback_data='Krem_dlya_kozhi_vokrug_glaz_levrana')
+
+    markup.add(item42, item43, item44, item45)
+
+    bot.send_message(call.message.chat.id, '*Выберите средство очищения(шо писать?) ↓*', reply_markup=markup,
+                     parse_mode="Markdown")
+
+
+
+def patchi_esthetic_house(call):
+    pass
+
+
+def odnorazovie_tkanevie_patchi(call):
+    pass
+
+
+def krem_dlya_vek_organic_kitchen(call):
+    pass
+
+
+def krem_dlya_kozhi_vokrug_glaz_levrana(call):
+    pass
+
+
+def dekorativnaya_kosmetika(call):
+    bot.send_message(call.message.chat.id, '_Вы выбрали пункт "Кремы для рук"._', parse_mode="Markdown")
+    markup = types.InlineKeyboardMarkup(row_width=1)
+    item46 = types.InlineKeyboardButton("Тональный крем Collagen", callback_data='Tonalniy_krem_collagen')
+    item47 = types.InlineKeyboardButton("Карандаш для губ Miss Tais", callback_data='Karandash_dlya_gub_miss_tais')
+
+    markup.add(item46, item47)
+
+    bot.send_message(call.message.chat.id, '*Выберите уход за руками(шо писать?) ↓*', reply_markup=markup,
+                     parse_mode="Markdown")
+
+
+def tonalniy_krem_collagen(call):
+    pass
+
+
+def karandash_dlya_gub_miss_tais(call):
+    pass
+
 
 @bot.message_handler(content_types=['text'])
 def user_return(message):
