@@ -364,6 +364,56 @@ def uvlazhn_sivoritka_levrana(call):
     pass
 
 
+def maski_i_pilingi(call):
+    bot.send_message(call.message.chat.id, '_Вы выбрали пункт "Маски и пилинги"._', parse_mode="Markdown")
+    markup = types.InlineKeyboardMarkup(row_width=1)
+    item35 = types.InlineKeyboardButton("Маска с лифтинг эффектом «Уколы красоты» Organic Kitchen",
+                                        callback_data='Maska_s_lifting_effectom_organic_kitchen')
+    item36 = types.InlineKeyboardButton("Маска увлажняющая «Огуречные кружочки» Organic Kitchen",
+                                        callback_data='Maska_uvlazhn_organic_kitchen')
+    item37 = types.InlineKeyboardButton("Кислотный пилинг Organic Kitchen",
+                                        callback_data='Kislotniy_piling_organic_kitchen')
+    item38 = types.InlineKeyboardButton("Гоммаж  для лица «Дыня» Organic Kitchen",
+                                        callback_data='Gommazh_dlya_lica_organic_kitchen')
+    item39 = types.InlineKeyboardButton("Убтан #1 для сухой кожи",
+                                        callback_data='Ubtan1_dlya_suhoy_kozhi')
+    item40 = types.InlineKeyboardButton("Убтан #2 для нормальной и жирной кожи",
+                                        callback_data='Ubtan2_dlya_norm_i_zhirnoy_kozhi')
+    item41 = types.InlineKeyboardButton("Тканевые маски Elizavecca", callback_data='Tkanevie_maski_elizavecca')
+
+    markup.add(item35, item36, item37, item38, item39, item40, item41)
+
+    bot.send_message(call.message.chat.id, '*Выберите средство ухода(шо писать?) ↓*', reply_markup=markup,
+                     parse_mode="Markdown")
+
+
+def maska_s_lifting_effectom_organic_kitchen(call):
+    pass
+
+
+def maska_uvlazhn_organic_kitchen(call):
+    pass
+
+
+def kislotniy_piling_organic_kitchen(call):
+    pass
+
+
+def gommazh_dlya_lica_organic_kitchen(call):
+    pass
+
+
+def ubtan1_dlya_suhoy_kozhi(call):
+    pass
+
+
+def ubtan2_dlya_norm_i_zhirnoy_kozhi(call):
+    pass
+
+
+def tkanevie_maski_elizavecca(call):
+    pass
+
 
 
 @bot.message_handler(content_types=['text'])
