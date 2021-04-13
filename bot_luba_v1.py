@@ -290,6 +290,82 @@ def uhod_za_kozhey_lica(call):
                      parse_mode="Markdown")
 
 
+def ochischenie(call):
+    bot.send_message(call.message.chat.id, '_Вы выбрали пункт "Очищение"._', parse_mode="Markdown")
+    markup = types.InlineKeyboardMarkup(row_width=1)
+    item25 = types.InlineKeyboardButton("Гель для умывания Organic Kitchen", callback_data='Gel_organic_kitchen')
+    item26 = types.InlineKeyboardButton("Мицелярная вода Laboratorium", callback_data='Mitsel_voda_laboratorium')
+    item27 = types.InlineKeyboardButton("Молочко для снятия макияжа Levrana", callback_data='Molochko_levrana')
+    markup.add(item25, item26, item27)
+
+    bot.send_message(call.message.chat.id, '*Выберите средство очищения(шо писать?) ↓*', reply_markup=markup,
+                     parse_mode="Markdown")
+
+
+
+def gel_organic_kitchen(call):
+    pass
+
+
+def mitsel_voda_laboratorium(call):
+    pass
+
+
+def molochko_levrana(call):
+    pass
+
+
+def onsnovnoy_uhod(call):
+    bot.send_message(call.message.chat.id, '_Вы выбрали пункт "Основной уход"._', parse_mode="Markdown")
+    markup = types.InlineKeyboardMarkup(row_width=1)
+    item28 = types.InlineKeyboardButton("Крем для лица Organic Kitchen", callback_data='Krem_organic_kitchen')
+    item29 = types.InlineKeyboardButton("Лёгкий крем для лица Organic Kitchen",
+                                        callback_data='Legkiy_krem_dlya_lica_organic_kitchen')
+    item30 = types.InlineKeyboardButton("Тоник Levrana", callback_data='Tonik_levrana')
+    item31 = types.InlineKeyboardButton("Сыворотка с гиалуроновой кислотой Organic Kitchen",
+                                        callback_data='Sivorotka_s_gialuronovoy_kislotoy_organic_kitchen')
+    item32 = types.InlineKeyboardButton("Сыворотка антиоксидантная с витамином «С» Organic Kitchen",
+                                        callback_data='Sivorotka_antioksidantnaya_organic_kitchen')
+    item33 = types.InlineKeyboardButton("Сыворотка с солициловой кислотой Organic Kitchen",
+                                        callback_data='Sivorotka_s_solicilovoy_kislotoy_organic_kitchen')
+    item34 = types.InlineKeyboardButton("Увлажняющая Сыворотка Levrana", callback_data='Uvlazhn_sivoritka_levrana')
+
+    markup.add(item28, item29, item30, item31, item32, item33, item34)
+
+    bot.send_message(call.message.chat.id, '*Выберите средство ухода(шо писать?) ↓*', reply_markup=markup,
+                     parse_mode="Markdown")
+
+
+def krem_organic_kitchen(call):
+    pass
+
+
+def legkiy_krem_dlya_lica_organic_kitchen(call):
+    pass
+
+
+def tonik_levrana(call):
+    pass
+
+
+def sivorotka_s_gialuronovoy_kislotoy_organic_kitchen(call):
+    pass
+
+
+def sivorotka_antioksidantnaya_organic_kitchen(call):
+    pass
+
+
+def sivorotka_s_solicilovoy_kislotoy_organic_kitchen(call):
+    pass
+
+
+def uvlazhn_sivoritka_levrana(call):
+    pass
+
+
+
+
 @bot.message_handler(content_types=['text'])
 def user_return(message):
     if message.chat.type == 'private':
