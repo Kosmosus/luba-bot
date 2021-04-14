@@ -4,6 +4,7 @@ from telebot import types
 bot = telebot.TeleBot('1605907018:AAHRF87TXFzH0Nk6fkJwvHmkXwngoKYOzQY')
 
 
+#  Приветствие
 @bot.message_handler(commands=['start'])
 def welcome(message):
     #  картинка при первом запуске бота
@@ -30,6 +31,7 @@ def welcome(message):
     bot.send_message(message.chat.id, 'За чем будем ухаживать, милочка?(шо?)', reply_markup=keyboard)
 
 
+#  Приветствие при нажатии кнопки "К началу ↑"
 @bot.message_handler(commands=['text'])
 def welcome_new(message):
     #  клавиатура над полем ввода
@@ -53,6 +55,7 @@ def welcome_new(message):
     bot.send_message(message.chat.id, 'За чем будем ухаживать, милочка?(шо?)', reply_markup=keyboard)
 
 
+#  Основное дерево бота
 @bot.callback_query_handler(func=lambda call: True)
 def answer(call):
     try:
@@ -112,6 +115,7 @@ def answer(call):
         print(repr(e))
 
 
+# Уход за волосами: I. Шампуни, II. Кондиционеры и маски, III. Другой уход.
 def uhod_za_volosami(call):
     bot.send_message(call.message.chat.id, '_Вы выбрали пункт "Уход за волосами"._', parse_mode="Markdown")
     markup = types.InlineKeyboardMarkup(row_width=1)
@@ -125,6 +129,7 @@ def uhod_za_volosami(call):
                      parse_mode="Markdown")
 
 
+#  I. Шампуни: 1. Шампунь СР-1, 2. Шампунь Evas Арония.
 def shampuni(call):
     bot.send_message(call.message.chat.id, '_Вы выбрали пункт "Шампуни"._', parse_mode="Markdown")
     markup = types.InlineKeyboardMarkup(row_width=1)
@@ -136,6 +141,7 @@ def shampuni(call):
                      parse_mode="Markdown")
 
 
+#  1. Шампунь СР-1.
 def shampun_cp1(call):
     msg = '*ESTHETIC HOUSE Увлажняющий шампунь для волос CP-1*.\nПротеиновый шампунь предназначен для ' \
           'профессионального очищения и ухода за волосами от корней до самых кончиков. Косметический ' \
@@ -146,6 +152,7 @@ def shampun_cp1(call):
     bot.send_photo(call.message.chat.id, photo, msg, parse_mode='Markdown')
 
 
+#  2. Шампунь Evas Арония.
 def shampun_evas_aronia(call):
     msg = '*Pedison Очищающий шампунь для волос Арония*.\nШампунь с экстрактом черноплодной рябины эффективно ' \
           'очищает кожу головы и волосы, насыщая их питательными ингредиентами. В результате локоны становятся ' \
@@ -155,6 +162,7 @@ def shampun_evas_aronia(call):
     bot.send_photo(call.message.chat.id, photo, msg, parse_mode='Markdown')
 
 
+#  II. Кондиционеры и маски: 1. Кондиционер СР-1, 2. Кондиционер Evas Арония, 3. Протеиновый маска СР-1.
 def kondicioneri_i_maski(call):
     bot.send_message(call.message.chat.id, '_Вы выбрали пункт "Кондиционеры и маски"._', parse_mode="Markdown")
     markup = types.InlineKeyboardMarkup(row_width=1)
@@ -167,18 +175,22 @@ def kondicioneri_i_maski(call):
                      parse_mode="Markdown")
 
 
+#  1. Кондиционер СР-1.
 def kondicioner_cp1(call):
     pass
 
 
+#  2. Кондиционер Evas Арония.
 def kondicioner_evas_aronia(call):
     pass
 
 
+#  3. Протеиновый маска СР-1.
 def proteinovaya_maska_cp1(call):
     pass
 
 
+#  III. Другой уход: 1. Филлер Lador, 2. Пилинг для головы СР-1.
 def drugoy_uhod(call):
     bot.send_message(call.message.chat.id, '_Вы выбрали пункт "Другой уход"._', parse_mode="Markdown")
     markup = types.InlineKeyboardMarkup(row_width=1)
@@ -190,10 +202,12 @@ def drugoy_uhod(call):
                      parse_mode="Markdown")
 
 
+#  1. Филлер Lador.
 def filler_lador(call):
     pass
 
 
+#  2. Пилинг для головы СР-1.
 def piling_dlya_golovi_cp1(call):
     pass
 
