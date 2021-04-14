@@ -300,6 +300,8 @@ def moloko_dlya_vanni(call):
     pass
 
 
+#  Уход за кожей лица: I. Очищение, II. Основной уход, III. Маски и пилинги, IV. Уход за кожей вокруг глаз,
+#                      V. Декоративная косметика.
 def uhod_za_kozhey_lica(call):
     bot.send_message(call.message.chat.id, '_Вы выбрали пункт "Уход за кожей лица"._', parse_mode="Markdown")
     markup = types.InlineKeyboardMarkup(row_width=2)
@@ -315,6 +317,8 @@ def uhod_za_kozhey_lica(call):
                      parse_mode="Markdown")
 
 
+#  I. Очищение: 1. Гель для умывания Organic Kitchen, 2. Мицелярная вода Laboratorium,
+#               3. Молочко для снятия макияжа Levrana.
 def ochischenie(call):
     bot.send_message(call.message.chat.id, '_Вы выбрали пункт "Очищение"._', parse_mode="Markdown")
     markup = types.InlineKeyboardMarkup(row_width=1)
@@ -327,19 +331,25 @@ def ochischenie(call):
                      parse_mode="Markdown")
 
 
-
+#  1. Гель для умывания Organic Kitchen.
 def gel_organic_kitchen(call):
     pass
 
 
+#  2. Мицелярная вода Laboratorium.
 def mitsel_voda_laboratorium(call):
     pass
 
 
+#  3. Молочко для снятия макияжа Levrana.
 def molochko_levrana(call):
     pass
 
 
+#  II. Основной уход: 1. Крем для лица Organic Kitchen, 2. Лёгкий крем для лица Organic Kitchen,
+#                     3. Тоник Levrana, 4. Сыворотка с гиалуроновой кислотой Organic Kitchen,
+#                     5. Сыворотка антиоксидантная с витамином «С» Organic Kitchen,
+#                     6. Сыворотка с солициловой кислотой Organic Kitchen, 7. Увлажняющая Сыворотка Levrana.
 def onsnovnoy_uhod(call):
     bot.send_message(call.message.chat.id, '_Вы выбрали пункт "Основной уход"._', parse_mode="Markdown")
     markup = types.InlineKeyboardMarkup(row_width=1)
@@ -361,34 +371,46 @@ def onsnovnoy_uhod(call):
                      parse_mode="Markdown")
 
 
+#  1. Крем для лица Organic Kitchen.
 def krem_organic_kitchen(call):
     pass
 
 
+#  2. Лёгкий крем для лица Organic Kitchen.
 def legkiy_krem_dlya_lica_organic_kitchen(call):
     pass
 
 
+#  3. Тоник Levrana
 def tonik_levrana(call):
     pass
 
 
+#  4. Сыворотка с гиалуроновой кислотой Organic Kitchen.
 def sivorotka_s_gialuronovoy_kislotoy_organic_kitchen(call):
     pass
 
 
+#  5. Сыворотка антиоксидантная с витамином «С» Organic Kitchen.
 def sivorotka_antioksidantnaya_organic_kitchen(call):
     pass
 
 
+#  6. Сыворотка с солициловой кислотой Organic Kitchen.
 def sivorotka_s_solicilovoy_kislotoy_organic_kitchen(call):
     pass
 
 
+#  7. Увлажняющая Сыворотка Levrana.
 def uvlazhn_sivoritka_levrana(call):
     pass
 
 
+#  III. Маски и пилинги: 1. Маска с лифтинг эффектом «Уколы красоты» Organic Kitchen,
+#                        2. Маска увлажняющая «Огуречные кружочки» Organic Kitchen,
+#                        3. Кислотный пилинг Organic Kitchen, 4. Гоммаж  для лица «Дыня» Organic Kitchen,
+#                        5. Убтан #1 для сухой кожи, 6. Убтан #2 для нормальной и жирной кожи,
+#                        7. Тканевые маски Elizavecca.
 def maski_i_pilingi(call):
     bot.send_message(call.message.chat.id, '_Вы выбрали пункт "Маски и пилинги"._', parse_mode="Markdown")
     markup = types.InlineKeyboardMarkup(row_width=1)
@@ -412,34 +434,44 @@ def maski_i_pilingi(call):
                      parse_mode="Markdown")
 
 
+#  1. Маска с лифтинг эффектом «Уколы красоты» Organic Kitchen.
 def maska_s_lifting_effectom_organic_kitchen(call):
     pass
 
 
+#  2. Маска увлажняющая «Огуречные кружочки» Organic Kitchen.
 def maska_uvlazhn_organic_kitchen(call):
     pass
 
 
+#  3. Кислотный пилинг Organic Kitchen.
 def kislotniy_piling_organic_kitchen(call):
     pass
 
 
+#  4. Гоммаж  для лица «Дыня» Organic Kitchen.
 def gommazh_dlya_lica_organic_kitchen(call):
     pass
 
 
+#  5. Убтан #1 для сухой кожи.
 def ubtan1_dlya_suhoy_kozhi(call):
     pass
 
 
+#  6. Убтан #2 для нормальной и жирной кожи.
 def ubtan2_dlya_norm_i_zhirnoy_kozhi(call):
     pass
 
 
+#  7. Тканевые маски Elizavecca.
 def tkanevie_maski_elizavecca(call):
     pass
 
 
+#  IV. Уход за кожей вокруг глаз: 1. Патчи Esthetic House, 2. Одноразовые тканевые патчи J:on,
+#                                 3. Крем для век «Ластик от морщин» Organic Kitchen,
+#                                 4. Крем для кожи вокруг глаз с алоэ Levrana.
 def uhod_za_kozhey_vokrug_glaz(call):
     bot.send_message(call.message.chat.id, '_Вы выбрали пункт "Уход за кожей вокруг глаз"._', parse_mode="Markdown")
     markup = types.InlineKeyboardMarkup(row_width=1)
@@ -457,23 +489,27 @@ def uhod_za_kozhey_vokrug_glaz(call):
                      parse_mode="Markdown")
 
 
-
+#  1. Патчи Esthetic House.
 def patchi_esthetic_house(call):
     pass
 
 
+#  2. Одноразовые тканевые патчи J:on.
 def odnorazovie_tkanevie_patchi(call):
     pass
 
 
+#  3. Крем для век «Ластик от морщин» Organic Kitchen.
 def krem_dlya_vek_organic_kitchen(call):
     pass
 
 
+#  4. Крем для кожи вокруг глаз с алоэ Levrana.
 def krem_dlya_kozhi_vokrug_glaz_levrana(call):
     pass
 
 
+#  V. Декоративная косметика: 1. Тональный крем Collagen, 2. Карандаш для губ Miss Tais.
 def dekorativnaya_kosmetika(call):
     bot.send_message(call.message.chat.id, '_Вы выбрали пункт "Кремы для рук"._', parse_mode="Markdown")
     markup = types.InlineKeyboardMarkup(row_width=1)
@@ -486,14 +522,17 @@ def dekorativnaya_kosmetika(call):
                      parse_mode="Markdown")
 
 
+#  1. Тональный крем Collagen.
 def tonalniy_krem_collagen(call):
     pass
 
 
+#  2. Карандаш для губ Miss Tais.
 def karandash_dlya_gub_miss_tais(call):
     pass
 
 
+#  Реакция на нажатие кнопки 'К началу ↑' и ввод сообщения в чат.
 @bot.message_handler(content_types=['text'])
 def user_return(message):
     if message.chat.type == 'private':
@@ -503,4 +542,5 @@ def user_return(message):
             bot.send_message(message.chat.id, 'Выберите один вариант из предложенных выше, пожалуйста.')
 
 
+#  Бесконечная работа бота.
 bot.polling(none_stop=True)
