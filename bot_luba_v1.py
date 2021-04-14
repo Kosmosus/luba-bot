@@ -212,6 +212,7 @@ def piling_dlya_golovi_cp1(call):
     pass
 
 
+#  Уход за телом: I. Кремы для тела, II. Кремы для рук, III. Средства для ванн.
 def uhod_za_telom(call):
     bot.send_message(call.message.chat.id, '_Вы выбрали пункт "Уход за телом"._', parse_mode="Markdown")
     markup = types.InlineKeyboardMarkup(row_width=1)
@@ -225,6 +226,7 @@ def uhod_za_telom(call):
                      parse_mode="Markdown")
 
 
+#  I. Кремы для тела: 1. Крем для тела Milv 250мл, 2. Масло для тела мимими, 3. Сухой скраб для тела
 def kremi_dlya_tela(call):
     bot.send_message(call.message.chat.id, '_Вы выбрали пункт "Кремы для тела"._', parse_mode="Markdown")
     markup = types.InlineKeyboardMarkup(row_width=1)
@@ -237,18 +239,22 @@ def kremi_dlya_tela(call):
                      parse_mode="Markdown")
 
 
+#  1. Крем для тела Milv 250мл.
 def krem_dlya_tela_milv_250(call):
     pass
 
 
+#  2. Масло для тела мимими.
 def maslo_dlya_tela_mimimi(call):
     pass
 
 
+#  3. Сухой скраб для тела.
 def suhoy_skrab_dlya_tela(call):
     pass
 
 
+#  II. Кремы для рук: 1. Крем для рук Milv 30мл, 2. Масло для кутикулы.
 def kremi_dlya_ruk(call):
     bot.send_message(call.message.chat.id, '_Вы выбрали пункт "Кремы для рук"._', parse_mode="Markdown")
     markup = types.InlineKeyboardMarkup(row_width=1)
@@ -261,14 +267,17 @@ def kremi_dlya_ruk(call):
                      parse_mode="Markdown")
 
 
+#  1. Крем для рук Milv 30мл.
 def krem_dlya_ruk_milv_30(call):
     pass
 
 
+#  2. Масло для кутикулы.
 def maslo_dlya_kutikuli(call):
     pass
 
 
+#  III. Средства для ванн: 1. Соль для ванны, 2. Молоко для ванны.
 def sredstva_dlya_vann(call):
     bot.send_message(call.message.chat.id, '_Вы выбрали пункт "Средства для ванн"._', parse_mode="Markdown")
     markup = types.InlineKeyboardMarkup(row_width=1)
@@ -281,10 +290,12 @@ def sredstva_dlya_vann(call):
                      parse_mode="Markdown")
 
 
+#  1. Соль для ванны.
 def sol_dlya_vanni(call):
     pass
 
 
+#  2. Молоко для ванны.
 def moloko_dlya_vanni(call):
     pass
 
