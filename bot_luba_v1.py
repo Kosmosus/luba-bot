@@ -82,8 +82,30 @@ def answer(call):
                 filler_lador(call)
             elif call.data == 'Piling_dlya_golovi_cp1':
                 piling_dlya_golovi_cp1(call)
+
             elif call.data == 'Uhod_za_telom':
                 uhod_za_telom(call)
+            elif call.data == 'Kremi_dlya_tela':
+                kremi_dlya_tela(call)
+            elif call.data == 'Krem_dlya_tela_milv_250':
+                krem_dlya_tela_milv_250(call)
+            elif call.data == 'Maslo_dlya_tela_mimimi':
+                maslo_dlya_tela_mimimi(call)
+            elif call.data == 'Suhoy_skrab_dlya_tela':
+                suhoy_skrab_dlya_tela(call)
+            elif call.data == 'Kremi_dlya_ruk':
+                kremi_dlya_ruk(call)
+            elif call.data == 'Krem_dlya_ruk_milv_30':
+                krem_dlya_ruk_milv_30(call)
+            elif call.data == 'Maslo_dlya_kutikuli':
+                maslo_dlya_kutikuli(call)
+            elif call.data == 'Sredstva_dlya_vann':
+                sredstva_dlya_vann(call)
+            elif call.data == 'Sol_dlya_vanni':
+                sol_dlya_vanni(call)
+            elif call.data == 'Moloko_dlya_vanni':
+                moloko_dlya_vanni(call)
+                
             elif call.data == 'Uhod_za_kozhey_lica':
                 uhod_za_kozhey_lica(call)
             elif call.data == 'pass':
