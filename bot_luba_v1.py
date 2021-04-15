@@ -105,33 +105,66 @@ def answer(call):
                 sol_dlya_vanni(call)
             elif call.data == 'Moloko_dlya_vanni':
                 moloko_dlya_vanni(call)
-                
+
             elif call.data == 'Uhod_za_kozhey_lica':
                 uhod_za_kozhey_lica(call)
-            elif call.data == 'pass':
-                pass
-            elif call.data == 'pass':
-                pass
-            elif call.data == 'pass':
-                pass
-            elif call.data == 'pass':
-                pass
-            elif call.data == 'pass':
-                pass
-            elif call.data == 'pass':
-                pass
-            elif call.data == 'pass':
-                pass
-            elif call.data == 'pass':
-                pass
-            elif call.data == 'pass':
-                pass
-            elif call.data == 'pass':
-                pass
-            elif call.data == 'pass':
-                pass
-            elif call.data == 'pass':
-                pass
+            elif call.data == 'Ochischenie':
+                ochischenie(call)
+            elif call.data == 'Gel_organic_kitchen':
+                gel_organic_kitchen(call)
+            elif call.data == 'Mitsel_voda_laboratorium':
+                mitsel_voda_laboratorium(call)
+            elif call.data == 'Molochko_levrana':
+                molochko_levrana(call)
+            elif call.data == 'Osnovnoy_uhod':
+                osnovnoy_uhod(call)
+            elif call.data == 'Krem_organic_kitchen':
+                krem_organic_kitchen(call)
+            elif call.data == 'Legkiy_krem_dlya_lica_organic_kitchen':
+                legkiy_krem_dlya_lica_organic_kitchen(call)
+            elif call.data == 'tonik_levrana':
+                tonik_levrana(call)
+            elif call.data == 'Sivorotka_s_gialuronovoy_kislotoy_organic_kitchen':
+                sivorotka_s_gialuronovoy_kislotoy_organic_kitchen(call)
+            elif call.data == 'Sivorotka_antioksidantnaya_organic_kitchen':
+                sivorotka_antioksidantnaya_organic_kitchen(call)
+            elif call.data == 'sivorotka_s_solicilovoy_kislotoy_organic_kitchen':
+                sivorotka_s_solicilovoy_kislotoy_organic_kitchen(call)
+            elif call.data == 'Uvlazhn_sivoritka_levrana':
+                uvlazhn_sivoritka_levrana(call)
+            elif call.data == 'Maski_i_pilingi':
+                maski_i_pilingi(call)
+            elif call.data == 'Maska_s_lifting_effectom_organic_kitchen':
+                maska_s_lifting_effectom_organic_kitchen(call)
+            elif call.data == 'Maska_uvlazhn_organic_kitchen':
+                maska_uvlazhn_organic_kitchen(call)
+            elif call.data == 'Kislotniy_piling_organic_kitchen':
+                kislotniy_piling_organic_kitchen(call)
+            elif call.data == 'Gommazh_dlya_lica_organic_kitchen':
+                gommazh_dlya_lica_organic_kitchen(call)
+            elif call.data == 'Ubtan1_dlya_suhoy_kozhi':
+                ubtan1_dlya_suhoy_kozhi(call)
+            elif call.data == 'ubtan2_dlya_norm_i_zhirnoy_kozhi':
+                ubtan2_dlya_norm_i_zhirnoy_kozhi(call)
+            elif call.data == 'tkanevie_maski_elizavecca':
+                tkanevie_maski_elizavecca(call)
+            elif call.data == 'Uhod_za_kozhey_vokrug_glaz':
+                uhod_za_kozhey_vokrug_glaz(call)
+            elif call.data == 'Patchi_esthetic_house':
+                patchi_esthetic_house(call)
+            elif call.data == 'Odnorazovie_tkanevie_patchi':
+                odnorazovie_tkanevie_patchi(call)
+            elif call.data == 'Krem_dlya_vek_organic_kitchen':
+                krem_dlya_vek_organic_kitchen(call)
+            elif call.data == 'Krem_dlya_kozhi_vokrug_glaz_levrana':
+                krem_dlya_kozhi_vokrug_glaz_levrana(call)
+            elif call.data == 'Dekorativnaya_kosmetika':
+                dekorativnaya_kosmetika(call)
+            elif call.data == 'Tonalniy_krem_collagen':
+                tonalniy_krem_collagen(call)
+            elif call.data == 'Karandash_dlya_gub_miss_tais':
+                karandash_dlya_gub_miss_tais(call)
+
 
     except Exception as e:
         print(repr(e))
@@ -328,7 +361,7 @@ def uhod_za_kozhey_lica(call):
     bot.send_message(call.message.chat.id, '_Вы выбрали пункт "Уход за кожей лица"._', parse_mode="Markdown")
     markup = types.InlineKeyboardMarkup(row_width=2)
     item7 = types.InlineKeyboardButton("Очищение", callback_data='Ochischenie')
-    item8 = types.InlineKeyboardButton("Основной уход", callback_data='Osnovnoi_uhod')
+    item8 = types.InlineKeyboardButton("Основной уход", callback_data='Osnovnoy_uhod')
     item9 = types.InlineKeyboardButton("Маски и пилинги", callback_data='Maski_i_pilingi')
     item10 = types.InlineKeyboardButton("Уход за кожей вокруг глаз", callback_data='Uhod_za_kozhey_vokrug_glaz')
     item11 = types.InlineKeyboardButton("Декоративная косметика", callback_data='Dekorativnaya_kosmetika')
@@ -372,7 +405,7 @@ def molochko_levrana(call):
 #                     3. Тоник Levrana, 4. Сыворотка с гиалуроновой кислотой Organic Kitchen,
 #                     5. Сыворотка антиоксидантная с витамином «С» Organic Kitchen,
 #                     6. Сыворотка с солициловой кислотой Organic Kitchen, 7. Увлажняющая Сыворотка Levrana.
-def onsnovnoy_uhod(call):
+def osnovnoy_uhod(call):
     bot.send_message(call.message.chat.id, '_Вы выбрали пункт "Основной уход"._', parse_mode="Markdown")
     markup = types.InlineKeyboardMarkup(row_width=1)
     item28 = types.InlineKeyboardButton("Крем для лица Organic Kitchen", callback_data='Krem_organic_kitchen')
