@@ -255,7 +255,13 @@ def kondicioner_evas_aronia(call):
 
 #  3. Протеиновый маска СР-1.
 def proteinovaya_maska_cp1(call):
-    pass
+    msg = '*ESTHETIC HOUSE Разглаживающая маска для волос Premium Protein Treatment*.\n' \
+          'Протеиновая маска возвращает силу волосам, придает им здоровый блеск и сияние. ' \
+          'В результате применения локоны становятся более послушными, легко расчесываются. ' \
+          'Благодаря нежной текстуре средство легко наносится и распределяется, проникая в структуру ' \
+          'каждого волоса.\n*Цена*: Объём 25мл - 340₽. Объём 250мл - 1050₽.'
+    photo = open('static/proteinovaya_maska_cp1.png', 'rb')
+    bot.send_photo(call.message.chat.id, photo, msg, parse_mode='Markdown')
 
 
 #  III. Другой уход: 1. Филлер Lador, 2. Пилинг для головы СР-1.
