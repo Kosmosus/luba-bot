@@ -245,7 +245,12 @@ def kondicioner_cp1(call):
 
 #  2. Кондиционер Evas Арония.
 def kondicioner_evas_aronia(call):
-    pass
+    msg = '*Pedison Кондиционер для окрашенных волос защитный с экстрактом рябины Арония*.\n' \
+          'Эксклюзивная формула защищает окрашенные волосы долго сохраняя их цвет. Волосы становятся ' \
+          'шелковистыми и блестящими. В составе содержится экстракт рябины, ягодный микс, протеины шелка.\n' \
+          '*Цена*: Объём 100мл - 280₽.'
+    photo = open('static/kondicioner_evas_aronia.png', 'rb')
+    bot.send_photo(call.message.chat.id, photo, msg, parse_mode='Markdown')
 
 
 #  3. Протеиновый маска СР-1.
