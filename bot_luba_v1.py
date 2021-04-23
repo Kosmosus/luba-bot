@@ -329,7 +329,11 @@ def kremi_dlya_tela(call):
 
 #  1. Крем для тела Milv 250мл.
 def krem_dlya_tela_milv_250(call):
-    pass
+    msg = '*Крем для тела Milv*.\nЛегкий крем для тела мгновенно впитывается и отлично смягчает кожу. ' \
+          'В состав средства входит Aqua Complex, обладающий великолепными увлажняющими свойствами, ' \
+          'поддерживает гидролипидный баланс, препятствует потере влаги.\n*Цена*: 240₽.'
+    photo = open('static/krem_dlya_tela_milv_250.png', 'rb')
+    bot.send_photo(call.message.chat.id, photo, msg, parse_mode='Markdown')
 
 
 #  2. Масло для тела мимими.
