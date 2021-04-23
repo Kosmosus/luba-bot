@@ -319,7 +319,7 @@ def kremi_dlya_tela(call):
     bot.send_message(call.message.chat.id, '_Вы выбрали пункт "Кремы для тела"._', parse_mode="Markdown")
     markup = types.InlineKeyboardMarkup(row_width=1)
     item18 = types.InlineKeyboardButton("Крем для тела Milv 250мл", callback_data='Krem_dlya_tela_milv_250')
-    item19 = types.InlineKeyboardButton("Масло для тела мимими", callback_data='Maslo_dlya_tela_mimimi')
+    item19 = types.InlineKeyboardButton("Масло для тела «мимими»", callback_data='Maslo_dlya_tela_mimimi')
     item20 = types.InlineKeyboardButton("Сухой скраб для тела", callback_data='Suhoy_skrab_dlya_tela')
     markup.add(item18, item19, item20)
 
@@ -338,8 +338,13 @@ def krem_dlya_tela_milv_250(call):
 
 #  2. Масло для тела мимими.
 def maslo_dlya_tela_mimimi(call):
-    pass
-
+    msg = '*Масло для тела «мимими»*.\nПодарите Вашей коже невероятно нежное, мимишное преображение! ' \
+          'Ваша кожа безупречна и достойна умиления! Разглаживающее масло для тела - это идеальная композиция ' \
+          'натуральных масел, которая дарит коже непревзойдённую гладкость и мягкость. Шелковое масло ' \
+          'эффективно устраняет сухость и шелушение кожи, насыщая ее витаминами. Органическое масло ' \
+          'мурумуру питает и омолаживает кожу, делая ее упругой и эластичной.\n*Цена*: 119₽.'
+    photo = open('static/maslo_dlya_tela_mimimi.png', 'rb')
+    bot.send_photo(call.message.chat.id, photo, msg, parse_mode='Markdown')
 
 #  3. Сухой скраб для тела.
 def suhoy_skrab_dlya_tela(call):
